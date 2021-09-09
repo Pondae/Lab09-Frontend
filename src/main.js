@@ -9,7 +9,7 @@ import camelCase from 'lodash/camelCase'
 const requireComponent = require.context(
     './components',
     false,
-    /Base[A-Z]\w+\. (vue|js)$/
+    /Base[A-Z]\w+\.(vue|js)$/
 )
 // Create a reactive object
 
@@ -24,3 +24,6 @@ requireComponent.keys().forEach((fileName) => {
 })
 
 app.use(router).provide('GStore', GStore).mount('#app')
+
+
+
